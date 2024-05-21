@@ -14,9 +14,10 @@ def download_image(url, file_name):
         print("이미지를 다운로드하는 동안 오류가 발생했습니다.")
 
 def save_img():
-    img_url = get_banner_img()
-    for url, title in img_url:
-        download_image(url, title)
+    for p in range(1, 15):
+        img_url = get_banner_img(p)
+        for url, title in img_url:
+            download_image(url, title)
 
 if __name__ == '__main__':
     save_img()

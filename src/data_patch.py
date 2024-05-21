@@ -1,10 +1,11 @@
 import requests
-from requestURL import basic_url
+from requestURL import getURL
 import json
 
-res = requests.get(basic_url)
 
-def get_crawl_data():
+
+def get_crawl_data(page):
+    res = requests.get(getURL(page))
     res_json = res.json()
     return res_json['data']
 
